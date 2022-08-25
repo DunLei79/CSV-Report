@@ -1,0 +1,74 @@
+{% extends "main.html" %} {% block content %}
+<h2>Report</h2>
+
+<ul>
+  <table class="table table-bordered table-striped table-hover">
+    <tr class="table table-primary">
+      <th>Ticket</th>
+      <th>Subject</th>
+      <th>Status</th>
+      <th>Agent</th>
+      <th>Group</th>
+      <th>Time On Site</th>
+      <th>Opened</th>
+      <th>Closed</th>
+      <th>Response Time</th>
+      <th>SLA</th>
+      <th>Branch</th>
+      <th>Branch Number</th>
+      <th>Engineer</th>
+      <th>Call Type</th>
+      <th>Printer Serial</th>
+      <th>Kilometers</th>
+      <th>Travel Time</th>
+      <th>Job Card</th>
+      <th>Dell Call Number</th>
+      <th>Customer Ref</th>
+      <th>Area</th>
+      <th>Parts Used</th>
+      <!-- <th>Closing Details</th> -->
+      <th>User</th>
+      <th>User Contact</th>
+      <th>Company</th>
+      <th></th>
+    </tr>
+    {% for call in report %}
+    <tr>
+      <td class="">{{call.ticket}}</td>
+      <td>{{call.subject}}</td>
+      <td>{{call.status}}</td>
+      <td>{{call.agent}}</td>
+      <td>{{call.group}}</td>
+      <td>{{call.time_tracked}}</td>
+      <td class="nowrap">{{call.created_time}}</td>
+      <td class="nowrap">{{call.closed_time}}</td>
+      <td>{{call.first_response_time}}</td>
+      <td>{{call.resolution_status}}</td>
+      <td>{{call.branch}}</td>
+      <td>{{call.branch_number}}</td>
+      <td>{{call.field_tech}}</td>
+      <td>{{call.call_type}}</td>
+      <td>{{call.printer_serial}}</td>
+      <td>{{call.km}}</td>
+      <td>{{call.travel_time}}</td>
+      <td>{{call.job_card}}</td>
+      <td>{{call.dell_call_number}}</td>
+      <td>{{call.customer_call_ref}}</td>
+      <td>{{call.area}}</td>
+      <td>{{call.parts_used}}</td>
+      <!-- <td>{{call.closing_details}}</td> -->
+      <td>{{call.users}}</td>
+      <td>{{call.contactid}}</td>
+      <td>{{call.company}}</td>
+      <td><a href="/ticket/{{call.id}}">View</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <!-- {% for call in report %}
+  <li><a href="/ticket/{{call.id}}">{{call.ticket}}</a></li>
+  <li>{{call.subject}}</li>
+  {% endfor %} -->
+</ul>
+
+{% endblock content %}

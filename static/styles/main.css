@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+}
+.container {
+  margin: 0;
+}
+
+th {
+  white-space: nowrap;
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+h2 {
+  margin: 1rem;
+  padding-left: 1rem;
+}
+
+nav {
+  background-color: rgb(202, 222, 235);
+  padding-left: 1rem;
+}

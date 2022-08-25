@@ -1,0 +1,9 @@
+{% extends "main.html" %} {% block content %}
+<h2>{{ticket.company}}- #[{{ticket.ticket}}]</h2>
+<p>Subject: {{ticket.subject}}</p>
+<p>Closing details: {{ticket.closing_details}}</p>
+<p>Time on site: {{ticket.time_tracked}}</p>
+<p>SLA: {{ticket.resolution_status}}</p>
+<p>Subject: {{ticket.subject}}</p>
+
+{% endblock content %}

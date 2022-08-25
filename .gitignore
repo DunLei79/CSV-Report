@@ -1,0 +1,7 @@
+envcsv/
+
+media/
+
+# DB
+db.sqlite3
+
